@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C423F3F027D3848D00C0ACC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423F3EF27D3848D00C0ACC3 /* AppDelegate.swift */; };
 		C423F3F227D3848D00C0ACC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423F3F127D3848D00C0ACC3 /* SceneDelegate.swift */; };
-		C423F3F427D3848D00C0ACC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423F3F327D3848D00C0ACC3 /* ViewController.swift */; };
 		C423F3F727D3848D00C0ACC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C423F3F527D3848D00C0ACC3 /* Main.storyboard */; };
 		C423F3FA27D3848D00C0ACC3 /* LetsMeet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C423F3F827D3848D00C0ACC3 /* LetsMeet.xcdatamodeld */; };
 		C423F3FC27D3848E00C0ACC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C423F3FB27D3848E00C0ACC3 /* Assets.xcassets */; };
@@ -18,6 +17,9 @@
 		C423F41427D3848E00C0ACC3 /* LetsMeetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423F41327D3848E00C0ACC3 /* LetsMeetUITests.swift */; };
 		C423F41627D3848E00C0ACC3 /* LetsMeetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423F41527D3848E00C0ACC3 /* LetsMeetUITestsLaunchTests.swift */; };
 		C423F42327D3A72900C0ACC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C423F42227D3A72900C0ACC3 /* GoogleService-Info.plist */; };
+		C4B1581827D4C7FE0047FA63 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1581727D4C7FE0047FA63 /* WelcomeViewController.swift */; };
+		C4B1581A27D4C8120047FA63 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1581927D4C8120047FA63 /* RegisterViewController.swift */; };
+		C4B1581C27D4DDA40047FA63 /* FUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1581B27D4DDA40047FA63 /* FUser.swift */; };
 		D05EC9219821A8CA36E39AF3 /* Pods_LetsMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0482CA47F42C4030D04A088 /* Pods_LetsMeet.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +46,6 @@
 		C423F3EC27D3848D00C0ACC3 /* LetsMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C423F3EF27D3848D00C0ACC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C423F3F127D3848D00C0ACC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C423F3F327D3848D00C0ACC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C423F3F627D3848D00C0ACC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C423F3F927D3848D00C0ACC3 /* LetsMeet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LetsMeet.xcdatamodel; sourceTree = "<group>"; };
 		C423F3FB27D3848E00C0ACC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +57,9 @@
 		C423F41327D3848E00C0ACC3 /* LetsMeetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsMeetUITests.swift; sourceTree = "<group>"; };
 		C423F41527D3848E00C0ACC3 /* LetsMeetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsMeetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C423F42227D3A72900C0ACC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C4B1581727D4C7FE0047FA63 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		C4B1581927D4C8120047FA63 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C4B1581B27D4DDA40047FA63 /* FUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUser.swift; sourceTree = "<group>"; };
 		E0482CA47F42C4030D04A088 /* Pods_LetsMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,13 +116,15 @@
 			children = (
 				C423F3EF27D3848D00C0ACC3 /* AppDelegate.swift */,
 				C423F3F127D3848D00C0ACC3 /* SceneDelegate.swift */,
-				C423F3F327D3848D00C0ACC3 /* ViewController.swift */,
 				C423F3F527D3848D00C0ACC3 /* Main.storyboard */,
 				C423F3FB27D3848E00C0ACC3 /* Assets.xcassets */,
 				C423F3FD27D3848E00C0ACC3 /* LaunchScreen.storyboard */,
 				C423F40027D3848E00C0ACC3 /* Info.plist */,
 				C423F42227D3A72900C0ACC3 /* GoogleService-Info.plist */,
 				C423F3F827D3848D00C0ACC3 /* LetsMeet.xcdatamodeld */,
+				C4B1581727D4C7FE0047FA63 /* WelcomeViewController.swift */,
+				C4B1581927D4C8120047FA63 /* RegisterViewController.swift */,
+				C4B1581B27D4DDA40047FA63 /* FUser.swift */,
 			);
 			path = LetsMeet;
 			sourceTree = "<group>";
@@ -154,7 +160,6 @@
 				BF8B01206CEB3D0E1C5902E6 /* Pods-LetsMeet.debug.xcconfig */,
 				6DB5ABB22F47B854528412A5 /* Pods-LetsMeet.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -335,7 +340,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C423F3FA27D3848D00C0ACC3 /* LetsMeet.xcdatamodeld in Sources */,
-				C423F3F427D3848D00C0ACC3 /* ViewController.swift in Sources */,
+				C4B1581A27D4C8120047FA63 /* RegisterViewController.swift in Sources */,
+				C4B1581827D4C7FE0047FA63 /* WelcomeViewController.swift in Sources */,
+				C4B1581C27D4DDA40047FA63 /* FUser.swift in Sources */,
 				C423F3F027D3848D00C0ACC3 /* AppDelegate.swift in Sources */,
 				C423F3F227D3848D00C0ACC3 /* SceneDelegate.swift in Sources */,
 			);
