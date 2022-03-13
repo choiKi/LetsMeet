@@ -6,7 +6,9 @@
 //
 
 import UIKit
+
 import ProgressHUD
+import Firebase
 
 class RegisterViewController: UIViewController {
 
@@ -35,22 +37,27 @@ class RegisterViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func registerButtonPressed(_ sender: Any) {
         if isTextDataInputed() {
             // register
-            registerUser()
+            if passwordTextField.text! == confirmTextField.text! {
+                registerUser()
+            }else{
+                ProgressHUD.showError("비밀번호가 일치하지 않습니다.")
+            }
+            
         }else {
             ProgressHUD.showError("모든 필드를 입력해야합니다")
         }
     }
+    
     @IBAction func loginButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func genderSegmentValueChanged(_ sender: Any) {
-        
-        isMale = (sender as AnyObject).selectedSegmentIndex == 0
-        
+    @IBAction func genderSegmentValueChanged(_ sender: UISegmentedControl) {
+        isMale = sender.selectedSegmentIndex == 0
     }
     
     //MARK: - SETUP
@@ -77,9 +84,20 @@ class RegisterViewController: UIViewController {
     //MARK: - Register
     private func registerUser() {
         
+        ProgressHUD.show()
+        
         FUser.registerUserWith(email: emailTextField.text!, password: passwordTextField.text!, userName: userNameTextField.text!, city: cityTextField.text!, isMale: isMale, dateOfBirth: Date(), completion: { error in
-            print("callback")
+            
+            ProgressHUD.dismiss()
+            
+            if error == nil {
+                ProgressHUD.showSucceed("등록 되었습니다")
+            }else {
+                print(error!)
+                ProgressHUD.showError(error?.localizedDescription)
+            }
         })
+        
     }
     
   

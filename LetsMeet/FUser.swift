@@ -7,7 +7,7 @@
 
 import Foundation
 import Firebase
-
+import UIKit
 
 class FUser: Equatable {
     
@@ -16,12 +16,28 @@ class FUser: Equatable {
         
     }
     let objectId: String = ""
+    var email: String
+    var username: String
+    var dateOfBirth: Date
+    var isMale: Bool
+    var avatar: UIImage?
+    var profession: String
+    var jobTitle: String
+    var about: String
+    var city: String
+    var country: String
+    var height: String
+    var lookingFor: String
+    var avatarLink: String
     
+    var likedIdArray: [String]?
+    var imageLinks: [String]?
+    let registeredDate = Date()
+    var pushId: String?
     
     class func registerUserWith(email: String, password: String, userName: String, city: String, isMale: Bool, dateOfBirth: Date, completion: @escaping (_ error : Error?) -> Void) {
             
         print("register success")
-        print("register", Date())
         
         Auth.auth().createUser(withEmail: email, password: password) { (authData, error) in
             
