@@ -15,7 +15,7 @@ class FUser: Equatable {
         lhs.objectId == rhs.objectId
         
     }
-    let objectId: String = ""
+    let objectId: String
     var email: String
     var username: String
     var dateOfBirth: Date
@@ -26,7 +26,7 @@ class FUser: Equatable {
     var about: String
     var city: String
     var country: String
-    var height: String
+    var height: Double
     var lookingFor: String
     var avatarLink: String
     
@@ -34,6 +34,26 @@ class FUser: Equatable {
     var imageLinks: [String]?
     let registeredDate = Date()
     var pushId: String?
+    
+    //MARK: - initialize
+    init(_objectId: String, _email: String, _username: String, _city: String, _dateOfBirth: Date, _isMale: Bool, _avatarLink: String = "") {
+        objectId = _objectId
+        email = _email
+        username = _username
+        dateOfBirth = _dateOfBirth
+        isMale = _isMale
+        profession = ""
+        jobTitle = ""
+        about = ""
+        city = _city
+        country = ""
+        height = 0.0
+        lookingFor = ""
+        avatarLink = _avatarLink
+        likedIdArray = []
+        imageLinks = []
+    }
+    
     
     class func registerUserWith(email: String, password: String, userName: String, city: String, isMale: Bool, dateOfBirth: Date, completion: @escaping (_ error : Error?) -> Void) {
             
@@ -49,6 +69,13 @@ class FUser: Equatable {
                     print("auth email verification sent", error?.localizedDescription)
                 }
                 //create user in database
+                
+                if authData?.user != nil {
+                    
+                    let user = FUser(_objectId: authData!.user.uid, _email: email, _username: userName, _city: city, _dateOfBirth: dateOfBirth, _isMale: isMale)
+                    
+                    
+                }
             }
             
             
