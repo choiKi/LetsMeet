@@ -17,6 +17,7 @@
 		C423F40A27D3848E00C0ACC3 /* LetsMeetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423F40927D3848E00C0ACC3 /* LetsMeetTests.swift */; };
 		C423F41427D3848E00C0ACC3 /* LetsMeetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423F41327D3848E00C0ACC3 /* LetsMeetUITests.swift */; };
 		C423F41627D3848E00C0ACC3 /* LetsMeetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423F41527D3848E00C0ACC3 /* LetsMeetUITestsLaunchTests.swift */; };
+		C48659CA27E43F29001FA440 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48659C927E43F29001FA440 /* Constants.swift */; };
 		C4B1581827D4C7FE0047FA63 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1581727D4C7FE0047FA63 /* WelcomeViewController.swift */; };
 		C4B1581A27D4C8120047FA63 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1581927D4C8120047FA63 /* RegisterViewController.swift */; };
 		C4B1581C27D4DDA40047FA63 /* FUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1581B27D4DDA40047FA63 /* FUser.swift */; };
@@ -57,6 +58,7 @@
 		C423F40F27D3848E00C0ACC3 /* LetsMeetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetsMeetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C423F41327D3848E00C0ACC3 /* LetsMeetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsMeetUITests.swift; sourceTree = "<group>"; };
 		C423F41527D3848E00C0ACC3 /* LetsMeetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsMeetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C48659C927E43F29001FA440 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C4B1581727D4C7FE0047FA63 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C4B1581927D4C8120047FA63 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C4B1581B27D4DDA40047FA63 /* FUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUser.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				C4B1581727D4C7FE0047FA63 /* WelcomeViewController.swift */,
 				C4B1581927D4C8120047FA63 /* RegisterViewController.swift */,
 				C4B1581B27D4DDA40047FA63 /* FUser.swift */,
+				C48659C927E43F29001FA440 /* Constants.swift */,
 			);
 			path = LetsMeet;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				C4B1581A27D4C8120047FA63 /* RegisterViewController.swift in Sources */,
 				C4B1581827D4C7FE0047FA63 /* WelcomeViewController.swift in Sources */,
 				C4B1581C27D4DDA40047FA63 /* FUser.swift in Sources */,
+				C48659CA27E43F29001FA440 /* Constants.swift in Sources */,
 				C423F3F027D3848D00C0ACC3 /* AppDelegate.swift in Sources */,
 				C423F3F227D3848D00C0ACC3 /* SceneDelegate.swift in Sources */,
 			);

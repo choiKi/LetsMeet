@@ -29,11 +29,52 @@ class FUser: Equatable {
     var height: Double
     var lookingFor: String
     var avatarLink: String
-    
     var likedIdArray: [String]?
     var imageLinks: [String]?
     let registeredDate = Date()
     var pushId: String?
+    
+    var userDictionary: NSDictionary{
+        return NSDictionary(objects: [
+            self.objectId,
+            self.email,
+            self.username,
+            self.dateOfBirth,
+            self.isMale,
+            self.profession,
+            self.jobTitle,
+            self.about,
+            self.city,
+            self.country,
+            self.height,
+            self.lookingFor,
+            self.avatarLink,
+            
+            self.likedIdArray ?? [],
+            self.imageLinks ?? [],
+            self.registeredDate,
+            self.pushId
+        ],
+                            forKeys: [kOBJECTID as NSCopying,
+                                      kEMAIL as NSCopying,
+                                      kUSERNAME as NSCopying,
+                                      kDATEOFBIRTH as NSCopying,
+                                      kISMALE as NSCopying,
+                                      kPROFESSION as NSCopying,
+                                      kJOBTITLE as NSCopying,
+                                      kABOUT as NSCopying,
+                                      kCITY as NSCopying,
+                                      kCOUNTRY as NSCopying,
+                                      kHEIGHT as NSCopying,
+                                      kLOOKINGFOR as NSCopying,
+                                      kAVATARLINK as NSCopying,
+                                      kLIKEIDARRAY as NSCopying,
+                                      kIMAGELINKS as NSCopying,
+                                      kREGISTERDDATE as NSCopying,
+                                      kPUSHID as NSCopying as NSCopying
+        
+        ])
+    }
     
     //MARK: - initialize
     init(_objectId: String, _email: String, _username: String, _city: String, _dateOfBirth: Date, _isMale: Bool, _avatarLink: String = "") {
@@ -74,12 +115,18 @@ class FUser: Equatable {
                     
                     let user = FUser(_objectId: authData!.user.uid, _email: email, _username: userName, _city: city, _dateOfBirth: dateOfBirth, _isMale: isMale)
                     
+                    user.saveUserLocally()
+                    
                     
                 }
             }
             
             
         }
+    }
+    
+    func saveUserLocally() {
+        
     }
     
     
