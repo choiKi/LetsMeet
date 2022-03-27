@@ -40,7 +40,18 @@ class WelcomeViewController: UIViewController {
         
         if emailTextField.text != "" && passwordTextField.text != "" {
             // login success
-            
+            FUser.loginUserWith(email: emailTextField.text!, password: passwordTextField.text!) { (error, isEmailVerified) in
+                
+                if error != nil {
+                    ProgressHUD.showError(error!.localizedDescription)
+                } else if isEmailVerified  {
+                    print("go to app")
+                    // enter the aplication
+                    
+                } else {
+                    ProgressHUD.showError("계정을 확인해주세요.")
+                }
+            }
             
         }else {
             ProgressHUD.showError("이메일과 비밀번호를 입력해주세요")

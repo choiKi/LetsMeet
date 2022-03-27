@@ -8,6 +8,7 @@
 import Foundation
 import Firebase
 import UIKit
+import FirebaseAuth
 
 class FUser: Equatable {
     
@@ -53,7 +54,7 @@ class FUser: Equatable {
             self.likedIdArray ?? [],
             self.imageLinks ?? [],
             self.registeredDate,
-            self.pushId
+            self.pushId ?? ""
         ],
                             forKeys: [kOBJECTID as NSCopying,
                                       kEMAIL as NSCopying,
@@ -95,6 +96,29 @@ class FUser: Equatable {
         imageLinks = []
     }
     
+    // MARK: - Login
+    class func loginUserWith(email: String, password: String, completion: @escaping(_ error: Error?, _ isEmailVerified:  Bool) -> Void) {
+        
+        Auth.auth().signIn(withEmail: email, password: password) {
+            (authDataResult, error) in
+            
+            if error == nil {
+                if authDataResult!.user.isEmailVerified  {
+                    
+                    // firebase check
+                    completion(error, true)
+                    
+                } else {
+                    print("이메일 잘못됨")
+                    completion(error, false)
+                    
+                }
+                
+            }else {
+                completion(error, false)
+            }
+        }
+    }
     
     class func registerUserWith(email: String, password: String, userName: String, city: String, isMale: Bool, dateOfBirth: Date, completion: @escaping (_ error : Error?) -> Void) {
             
@@ -125,8 +149,10 @@ class FUser: Equatable {
         }
     }
     
+    
     func saveUserLocally() {
-        
+        userDefaults.setValue(self.userDictionary as! [String : Any], forKey: kCURRENTUSER)
+        userDefaults.synchronize()
     }
     
     

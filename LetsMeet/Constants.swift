@@ -7,6 +7,8 @@
 
 import Foundation
 
+public let userDefaults = UserDefaults.standard
+
  //FUSER
 public let kOBJECTID = "objectId"
 public let kEMAIL = "email"

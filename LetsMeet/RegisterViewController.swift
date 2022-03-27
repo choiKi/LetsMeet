@@ -79,6 +79,9 @@ class RegisterViewController: UIViewController {
     private func isTextDataInputed() -> Bool {
         
         return userNameTextField.text != "" && emailTextField.text != "" && cityTextField.text != "" && dateOfBirthTextField.text != "" && passwordTextField.text != "" && confirmTextField.text != ""
+        
+        
+        
     }
     
     //MARK: - Register
@@ -92,6 +95,7 @@ class RegisterViewController: UIViewController {
             
             if error == nil {
                 ProgressHUD.showSucceed("등록 되었습니다")
+                self.dismiss(animated: true, completion: nil)
             }else {
                 print(error!)
                 ProgressHUD.showError(error?.localizedDescription)
